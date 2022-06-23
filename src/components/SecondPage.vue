@@ -16,6 +16,7 @@ const props = defineProps({
     <div class="bg-[#eeb17f] h-full w-[50%] flex flex-col items-center">
       <div
         class="h-[120px] flex w-full justify-center items-center bg-[#c06476]"
+        :style="index == 0 ? { display: 'flex' } : { display: 'none' }"
       >
         <font-awesome-icon icon="arrow-down" class="w-[18px] h-[18px]" />
         <p class="pl-[15px]">See What We Do</p>
