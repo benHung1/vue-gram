@@ -1,13 +1,13 @@
 <script setup></script>
 <template lang="">
-  <section class="w-full h-[100vh] fixed bg-[#eeb17f]">
+  <section class="w-full bg-[#eeb17f] h-screen">
     <div
       class="w-[54px] h-[54px] rounded-[50%] bg-[#d77a42] flex items-center justify-center fixed top-5 right-5"
     >
       <font-awesome-icon :icon="['fas', 'grip-lines']" class="text-white" />
     </div>
     <div
-      class="w-full flex flex-col items-center justify-center h-full text-center md:text-6xl text-white tracking-widest"
+      class="w-full flex flex-col items-center justify-center h-full text-center text-4xl md:text-6xl text-white tracking-widest"
     >
       <div
         class="rounded-[50%] w-[106px] h-[106px] bg-[#d77a42] flex justify-center items-center"
@@ -20,7 +20,7 @@
       </h1>
       <p class="text-[16px] tracking-tighter">For The World's Leading Brands</p>
       <button
-        class="rounded-[30px] bg-white text-[#d77a42] px-[20px] py-[15px] mt-[40px] text-[16px]"
+        class="rounded-[30px] bg-white text-[#d77a42] px-[20px] md:py-[15px] mt-[40px] text-[16px]"
       >
         Like What ?
       </button>
