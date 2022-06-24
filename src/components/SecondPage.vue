@@ -4,12 +4,16 @@ const props = defineProps({
     tyep: Array,
     required: true,
   },
+  pics: {
+    type: Array,
+    required: true,
+  },
 });
 </script>
 
 <template lang="">
   <section
-    class="w-full flex text-white h-screen -mt-[100px]"
+    class="w-full flex text-white h-screen"
     v-for="(item, index) in props.items"
     :key="index"
   >
@@ -24,6 +28,7 @@ const props = defineProps({
 
       <div
         class="md:px-[100px] h-full flex flex-col justify-center items-start"
+        :style="index % 2 == 0 ? { order: '1' } : { order: '2' }"
       >
         <p class="text-[#d77a42] font-bold">
           {{ item.title }}
@@ -31,21 +36,24 @@ const props = defineProps({
         <h1 class="my-[20px] md:text-5xl text-4xl">
           {{ item.content }}
         </h1>
-        <button class="p-4 bg-[#d77a42] rounded-[30px]">
+        <button class="p-4 bg-[#d77a42] rounded-[30px] flex items-center">
           {{ item.buttonText }}
           <font-awesome-icon icon="arrow-right" class="w-[18px] h-[18px]" />
         </button>
       </div>
     </div>
+
     <div
-      class="bg w-[50%] h-screen bg-no-repeat bg-conver bg-left"
-      :style="
-        index % 2 == 0
-          ? { 'background-color': 'red' }
-          : { 'background-color': 'pink' }
-      "
+      v-for="(pic, index) in props.pics"
+      :key="index"
+      class="w-[50%] h-screen bg-no-repeat bg-conver bg-left"
+      :class="`bg-[url('${pic.bg}')]`"
     ></div>
   </section>
 </template>
 
-<style></style>
+<style>
+section:first-child {
+  margin-top: -100px;
+}
+</style>

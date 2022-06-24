@@ -5,28 +5,43 @@ import SecondPage from "./components/SecondPage.vue";
 
 import { ref } from "vue";
 
+const pics = ref([
+  {
+    bg: new URL(
+      "https://thisisgrow-wp-assets-prod.storage.googleapis.com/wp-content/uploads/2022/01/18173048/Home_WUM-1.jpg",
+      import.meta.url
+    ).href,
+  },
+  {
+    bg: new URL(
+      "https://thisisgrow-wp-assets-prod.storage.googleapis.com/wp-content/uploads/2022/01/18173048/Home_WUM-1.jpg",
+      import.meta.url
+    ).href,
+  },
+  {
+    bg: new URL(
+      "https://thisisgrow-wp-assets-prod.storage.googleapis.com/wp-content/uploads/2022/01/18173048/Home_WUM-1.jpg",
+      import.meta.url
+    ).href,
+  },
+]);
+
 const items = ref([
   {
     title: "GOOGLE / PLATFORM",
     content:
       "Marketing masterrials for every smaill business in America(No really)",
     buttonText: "Tell me more",
-    bgSrc:
-      "https://thisisgrow-wp-assets-prod.storage.googleapis.com/wp-content/uploads/2022/02/18172920/Home_Small-Thanks-1.jpg",
   },
   {
     title: "ADIDAS / EVENT-BASED EXPERIENCES",
     content: "Highlight films for 30,000 runners, wicked fast",
     buttonText: "Get the rundown",
-    bgSrc:
-      "https://thisisgrow-wp-assets-prod.storage.googleapis.com/wp-content/uploads/2022/01/18173006/Home_Boston-1.jpg",
   },
   {
     title: "ADIDAS / MULTI-CHANNEL CAMPAIGNS",
     content: "If its called activewear... shouldnt it move ? ",
     buttonText: "Jump in",
-    bgSrc:
-      "https://thisisgrow-wp-assets-prod.storage.googleapis.com/wp-content/uploads/2022/01/18173048/Home_WUM-1.jpg",
   },
 ]);
 </script>
@@ -34,7 +49,7 @@ const items = ref([
 <template>
   <!-- <Header /> -->
   <FirstPage />
-  <SecondPage :items="items" />
+  <SecondPage :items="items" :pics="pics" />
 </template>
 
 <style></style>
